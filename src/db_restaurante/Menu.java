@@ -23,23 +23,47 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        btnEliminarPlatos = new javax.swing.JButton();
+        btnAgregarPlatos = new javax.swing.JButton();
+        btnPlatos = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaPlatos = new javax.swing.JTable();
-        btnAgregarPlatos = new javax.swing.JButton();
-        btnEliminarPlatos = new javax.swing.JButton();
-        btnPlatos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tablaBebidas = new javax.swing.JTable();
         btnBebidas = new javax.swing.JButton();
         btnAgregarBebida = new javax.swing.JButton();
         btnEliminarBebidas = new javax.swing.JButton();
         btnRegresar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaBebidas = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnEliminarPlatos.setText("Eliminar");
+        btnEliminarPlatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarPlatosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEliminarPlatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, 120, -1));
+
+        btnAgregarPlatos.setText("Agregar");
+        btnAgregarPlatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarPlatosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAgregarPlatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 120, -1));
+
+        btnPlatos.setText("Ver Platos");
+        btnPlatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlatosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnPlatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 120, 30));
 
         tablaPlatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -66,67 +90,44 @@ public class Menu extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tablaPlatos);
 
-        btnAgregarPlatos.setText("Agregar");
-        btnAgregarPlatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarPlatosActionPerformed(evt);
-            }
-        });
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, 155));
 
-        btnEliminarPlatos.setText("Eliminar");
-        btnEliminarPlatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarPlatosActionPerformed(evt);
-            }
-        });
-
-        btnPlatos.setText("Ver Platos");
-        btnPlatos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlatosActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Platos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPlatos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEliminarPlatos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAgregarPlatos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(302, 302, 302)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnPlatos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnAgregarPlatos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnEliminarPlatos)))
-                .addGap(27, 27, 27))
-        );
+        btnBebidas.setText("Ver Bebidas");
+        btnBebidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBebidasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnBebidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 120, -1));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
-        jLabel2.setText("Bebidas");
+        btnAgregarBebida.setText("Agragar");
+        btnAgregarBebida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarBebidaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAgregarBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, 120, -1));
+
+        btnEliminarBebidas.setText("Eliminar");
+        btnEliminarBebidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarBebidasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEliminarBebidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, 120, -1));
+
+        btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 440, 99, -1));
 
         tablaBebidas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -153,93 +154,15 @@ public class Menu extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tablaBebidas);
 
-        btnBebidas.setText("Ver Bebidas");
-        btnBebidas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBebidasActionPerformed(evt);
-            }
-        });
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, 158));
 
-        btnAgregarBebida.setText("Agragar");
-        btnAgregarBebida.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarBebidaActionPerformed(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Bebidas");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
 
-        btnEliminarBebidas.setText("Eliminar");
-        btnEliminarBebidas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarBebidasActionPerformed(evt);
-            }
-        });
-
-        btnRegresar.setText("Regresar");
-        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegresarActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(296, 296, 296))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnRegresar, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnAgregarBebida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                        .addComponent(btnEliminarBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnBebidas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnAgregarBebida)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnEliminarBebidas)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(btnRegresar)
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo 3.jpg"))); // NOI18N
+        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -255,7 +178,7 @@ public class Menu extends javax.swing.JFrame {
 
             try {
                 while (rs.next()) {
-                    modelo.addRow(new Object[]{rs.getString("id_Comida"), rs.getString("Nombre"), rs.getString("Precion")});
+                    modelo.addRow(new Object[]{rs.getString("Cod_Plato"), rs.getString("Nombre"), rs.getString("Precio")});
                 }
                 tablaPlatos.setModel(modelo);
             } catch (Exception ex) {
@@ -266,6 +189,19 @@ public class Menu extends javax.swing.JFrame {
             System.out.println(e);
         }
     }//GEN-LAST:event_btnPlatosActionPerformed
+
+    private void btnEliminarPlatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPlatosActionPerformed
+        String id = JOptionPane.showInputDialog(null, "Ingrese el código del plato");
+        try {
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurante", "root", "");
+            PreparedStatement pst = cn.prepareStatement("DELETE FROM platos WHERE Cod_Plato=?");
+            pst.setString(1, id);
+            pst.executeUpdate();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_btnEliminarPlatosActionPerformed
 
     private void btnAgregarPlatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPlatosActionPerformed
         String nombre, precio;
@@ -283,19 +219,40 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAgregarPlatosActionPerformed
 
-    private void btnEliminarPlatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPlatosActionPerformed
-        String id = JOptionPane.showInputDialog(null, "Ingrese el código del plato");
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        Principal formulario = new Principal();
+        formulario.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnEliminarBebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarBebidasActionPerformed
+        String id = JOptionPane.showInputDialog(null, "Ingrese el código de la bebida");
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurante", "root", "");
-            PreparedStatement pst = cn.prepareStatement("DELETE FROM platos WHERE id_Comida=?");
+            PreparedStatement pst = cn.prepareStatement("DELETE FROM bebidas WHERE Cod_Bebida=?");
             pst.setString(1, id);
             pst.executeUpdate();
 
         } catch (Exception e) {
             System.out.println(e);
         }
+    }//GEN-LAST:event_btnEliminarBebidasActionPerformed
 
-    }//GEN-LAST:event_btnEliminarPlatosActionPerformed
+    private void btnAgregarBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarBebidaActionPerformed
+        String nombre, precio;
+        nombre = JOptionPane.showInputDialog(null, "Ingrese el nombre de la bebida");
+        precio = JOptionPane.showInputDialog(null, "Ingrese el precio de la bebida");
+        try {
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurante", "root", "");
+            PreparedStatement pst = cn.prepareStatement("INSERT INTO bebidas VALUES (?,?,?)");
+            pst.setString(1, "0");
+            pst.setString(2, nombre);
+            pst.setString(3, precio);
+            pst.executeUpdate();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_btnAgregarBebidaActionPerformed
 
     private void btnBebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBebidasActionPerformed
         DefaultTableModel modelo = new DefaultTableModel();
@@ -315,45 +272,7 @@ public class Menu extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println(e);
         }
-
     }//GEN-LAST:event_btnBebidasActionPerformed
-
-    private void btnAgregarBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarBebidaActionPerformed
-        String nombre, precio;
-        nombre = JOptionPane.showInputDialog(null, "Ingrese el nombre de la bebida");
-        precio = JOptionPane.showInputDialog(null, "Ingrese el precio de la bebida");
-        try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurante", "root", "");
-            PreparedStatement pst = cn.prepareStatement("INSERT INTO bebidas VALUES (?,?,?)");
-            pst.setString(1, "0");
-            pst.setString(2, nombre);
-            pst.setString(3, precio);
-            pst.executeUpdate();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-    }//GEN-LAST:event_btnAgregarBebidaActionPerformed
-
-    private void btnEliminarBebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarBebidasActionPerformed
-        String id = JOptionPane.showInputDialog(null, "Ingrese el código de la bebida");
-        try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurante", "root", "");
-            PreparedStatement pst = cn.prepareStatement("DELETE FROM bebidas WHERE Cod_Bebida=?");
-            pst.setString(1, id);
-            pst.executeUpdate();
-
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-    }//GEN-LAST:event_btnEliminarBebidasActionPerformed
-
-    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        Principal formulario = new Principal();
-        formulario.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -400,10 +319,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblFondo;
     private javax.swing.JTable tablaBebidas;
     private javax.swing.JTable tablaPlatos;
     // End of variables declaration//GEN-END:variables
